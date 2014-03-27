@@ -1,4 +1,4 @@
-package close.nestedtictactoe;
+package net.drumber.nestedtictactoe;
 
 import net.drumber.nestedtictactoe.NestedTicTacToe;
 
