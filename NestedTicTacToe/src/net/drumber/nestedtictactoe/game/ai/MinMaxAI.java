@@ -47,7 +47,7 @@ public class MinMaxAI extends AI {
 			} else {
 				rating = -1*minMax(nextGameState, maxDepth,  1);
 			}
-			System.out.println(move.x + ", " + move.y + ": " + rating);
+			//System.out.println(move.x + ", " + move.y + ": " + rating);
 			if (rating > maxRating) {
 				maxRating = rating;
 				bestMoves.clear();
