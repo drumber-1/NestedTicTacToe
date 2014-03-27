@@ -1,0 +1,13 @@
+{
+strings: [
+	"Welcome to nested tictactoe!",
+	"The game is played on a grid like the one to the right",
+	"It is split into 9 sub-games of tictactoe",
+	"The objective is to win 3 sub-games in a row",
+	"However, The position of your move determines where your opponent must play",
+	"Crosses has played in the bottom left of the centre game",
+	"So You must play in the bottom left grid",
+	"Being sent to a completed game gives you a free move",
+	"Select a square and use the button below to try it out"
+]
+}
