@@ -137,12 +137,14 @@ public class GameState {
 			for (int j = 0; j < 3; j++) {
 				Element e = elements[(sg_x * 3) + i][(sg_y * 3) + j];
 				if (e == Element.CROSS) {
-					mask += Math.pow(3, i + 3 * j);
+					mask += Math.round(Math.pow(3, i + 3 * j));
 				} else if (e == Element.NOUGHT) {
-					mask += 2 * Math.pow(3, i + 3 * j);
+					mask += Math.round(2 * Math.pow(3, i + 3 * j));
 				}
 			}
 		}
+		System.out.println("mask: " + mask);
+		System.out.println("new State: " + StateLookUp.getState(mask));
 		subGridStates[sg_x][sg_y] = StateLookUp.getState(mask);
 		if (subGridStates[sg_x][sg_y] == GridState.WIN_CROSS || subGridStates[sg_x][sg_y] == GridState.WIN_NOUGHT || subGridStates[sg_x][sg_y] == GridState.DRAW) {
 			updateState();
@@ -159,9 +161,9 @@ public class GameState {
 			for (int j = 0; j < 3; j++) {
 				GridState s = subGridStates[i][j];
 				if (s == GridState.WIN_CROSS) {
-					mask += Math.pow(3, i + 3 * j);
+					mask += Math.round(Math.pow(3, i + 3 * j));
 				} else if (s == GridState.WIN_NOUGHT) {
-					mask += 2 * Math.pow(3, i + 3 * j);
+					mask += Math.round(2 * Math.pow(3, i + 3 * j));
 				} else if (s != GridState.DRAW) {
 					full = false;
 				}
